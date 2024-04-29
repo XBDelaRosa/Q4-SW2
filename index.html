@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/ICT/4th Qtr/Seatwork 2</title>
+    <style>
+        body {
+            background-image: url('file:///var/folders/22/6t7mnbvx62z39gtmv7kwh6_c0000gn/T/TemporaryItems/NSIRD_screencaptureui_aEEZ7q/Screenshot%202024-04-29%20at%202.20.28%E2%80%AFPM.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;           
+            height: 100vh;
+            margin: 20px;
+            color: maroon; 
+            text-align: center; /* Center-align text */
+        }
+        input {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+            color: red;
+        }
+        .container {
+            background-color: pink;
+            padding: 20px;
+            margin: auto; /* Center the container horizontally */
+            max-width: 500px;
+        }
+        h1, h2 {
+            color: maroon;
+        }
+    </style>
+</head>
+
+<script>
+function calculate(operation) {
+    var x = parseFloat(document.getElementById('x').value);
+    var y = parseFloat(document.getElementById('y').value);
+    var result;
+
+    switch(operation) {
+        case 'product':
+            result = x * y;
+            break;
+        case 'exponent':
+            result = Math.pow(x, y);
+            break;
+        case 'remainder':
+            result = x % y;
+            break;
+        case 'equality':
+            result = (x === y) ? "x is equal to y" : "x is not equal to y";
+            break;
+        default:
+            result = "Invalid operation";
+    }
+    window.alert("Result: " + result);
+}
+</script>
+<body>
+<div class="container mt-3">
+    <form>
+        <h1>HELLO THERE, MY NAME IS SNUGGLEBERRY!!!</h1>
+        <h2>Calculator</h2>
+        <label for="x">Enter a value for x:</label><br>
+        <input type="number" id="x">
+        <label for="y">Enter a value for y:</label>
+        <input type="number" id="y">
+    </form>
+</div>
+<div class="container"> 
+    <button onclick="calculate('product')">Product of X and Y</button>
+    <button onclick="calculate('exponent')">X raised to Y</button>
+    <button onclick="calculate('remainder')">Get the remainder</button>
+    <button onclick="calculate('equality')">Check if X is equal to Y</button>
+</div>
+</body>
+</html>
